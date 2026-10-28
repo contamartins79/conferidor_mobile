@@ -1124,7 +1124,7 @@ function confirmar(msg,op){return _dialogo(Object.assign({msg,sim:'OK',nao:'Canc
 function perguntar(msg,valor,op){return _dialogo(Object.assign({msg,input:valor==null?'':String(valor),sim:'OK',nao:'Cancelar'},op||{}));}
 
 /* ---------- Validade dos lotes (campo dVal do XML) ---------- */
-const MESES_VALIDADE_CURTA = 6; // avisar quando faltar menos que isso (em meses)
+const MESES_VALIDADE_CURTA = 3; // avisar quando faltar menos que isso (em meses)
 function dataVal(str){
   const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(str||'')); if(!m)return null;
   return new Date(+m[1],+m[2]-1,+m[3]);
